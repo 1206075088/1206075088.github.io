@@ -551,7 +551,7 @@
 <h3 id="生物相容性"><a href="#生物相容性" class="headerlink" title="生物相容性"></a>生物相容性</h3><p>细胞活力由 MTT 测试确定，这是一种分析细胞代谢的比色测试，基于 MTT 化合物在线粒体琥珀酸脱氢酶（NAD (P) H 依赖性线粒体琥珀酸脱氢酶）的作用下减少。代谢活跃的细胞。MTT 中黄色可溶性四唑盐的减少和紫色甲臜晶体的形成表明存在活细胞。通过 MTT 测试评估细胞毒性可以量化与活细胞数量直接相关的代谢活动。人角质形成细胞在补充有 2 mM l-谷氨酰胺、每毫升 100 单位的抗生素混合物（青霉素/链霉素/两性霉素）和 10% 胎牛血清，并保存在 37°C 加湿的培养箱中，CO2浓度为 5%。</p>
 <p>为了评估样品（LVM、CP3LVM、H4LVM、CT4LVM）对 HaCaT 细胞的细胞毒性作用，将每个样品以每 1 mL 培养基 1 µL 样品的浓度添加到无菌 24 孔培养板中。加入样品后立即以每孔1.9 cm 2 2∙× 10 5 个细胞的接种密度加入细胞培养基. 将细胞与样品在培养箱中在 37°C 下孵育 24 小时。未处理的细胞孔用作对照。接下来，在倒置光学显微镜下用相差 Olympus IX71（Olympus，Tokyo，Japan）用 10 倍物镜进行检查。立即去除培养基并用每孔1 mL磷酸盐缓冲盐水（PBS）洗涤，并在每孔中加入500 μL MTT溶液（1 mg/mL）。用 MTT 溶液培养两小时后，将其取出，用异丙醇溶解甲臜晶体。在程序结束时，使用 FlexStation 3 Multi-Mode 读板机（Molecular Devices，San Jose，CA，USA）在 595 nm 波长下通过分光光度法测定细胞活力。</p>
 <h2 id="MoBi模拟皮肤渗透模型"><a href="#MoBi模拟皮肤渗透模型" class="headerlink" title="MoBi模拟皮肤渗透模型"></a>MoBi模拟皮肤渗透模型</h2><h3 id="理论模型"><a href="#理论模型" class="headerlink" title="理论模型"></a>理论模型</h3><p>该模型假设如图所示的皮肤结构。皮肤板是横截面积𝐴，由三个堆叠层组成：Stratum Corneum（SC），可行的表皮（ED）和真皮（DE）。</p>
-<img src="C:\Users\湖之极\AppData\Roaming\Typora\typora-user-images\image-20211025230333244.png" alt="image-20211025230333244" style="zoom:50%;" />
+<img src="https://pic.imgdb.cn/item/617c0d722ab3f51d91686067.jpg" alt="image-20211025230333244" style="zoom:50%;" />
 
 <p>本文档是(Dancik et al. 2013)中皮肤渗透模型的MoBi实现的用户指南。在那个模型中，皮肤是一个多层板，其中应用渗透扩散。模型中的每一个平板层对应于一个解剖皮肤层，并从该层的物理和化学性质继承其扩散参数。在MoBi中，用户输入描述皮肤、环境条件、实验条件、渗透、载体(如果有)和剂量条件的参数。</p>
 <p>模型返回的仿真:</p>
@@ -569,7 +569,7 @@
 <p>𝑘𝑒𝑣𝑎𝑝 渗透蒸发速率。</p>
 <p>𝑉𝑚𝑎𝑥 Michaelis-Menten渗透代谢降解饱和率。</p>
 <p>𝐾𝑀  代谢降解半饱和状态下的渗透浓度。</p>
-<img src="C:\Users\湖之极\AppData\Roaming\Typora\typora-user-images\image-20211025230523420.png" alt="image-20211025230523420" style="zoom:80%;" />
+<img src="https://pic.imgdb.cn/item/617c0d922ab3f51d9168a227.jpg" alt="image-20211025230523420" style="zoom:80%;" />
 
 <h3 id="使用步骤"><a href="#使用步骤" class="headerlink" title="使用步骤"></a>使用步骤</h3><h4 id="一-Step-by-step-setup-and-simulation-of-example-experiment"><a href="#一-Step-by-step-setup-and-simulation-of-example-experiment" class="headerlink" title="一.Step-by-step setup and simulation of example experiment"></a>一.Step-by-step setup and simulation of example experiment</h4><h5 id="1-Input-of-experiment-parameters"><a href="#1-Input-of-experiment-parameters" class="headerlink" title="1.Input of experiment parameters"></a>1.Input of experiment parameters</h5><ol>
 <li>打开MoBi模型文件skin_permeation_model.mbp3。</li>
@@ -583,13 +583,13 @@
 <li>要做到这一点，右键单击“building Blocks”菜单中的“Parameter Start Values”构建块，并选择“Create New Parameter Start Values”。然后给这些参数起一个描述性的名字，例如params_in_vivo__small_dose，然后单击“Ok”。</li>
 </ol>
 <p>在“Molecules”构建块菜单下，skin_molecules构建块包含了模拟中包含的化合物列表。在图7所示的示例中，要模拟的化合物被命名为“permeant”。通过右键单击“permeant”并选择“Rename”菜单项，可以给这个化合物一个更具描述性的名称。但是，当输入新名称后提示重命名化合物的依赖对象时，随后重命名化合物的依赖对象也很重要，如图8所示。</p>
-<img src="C:\Users\湖之极\AppData\Roaming\Typora\typora-user-images\image-20211025232913836.png" alt="image-20211025232913836" style="zoom:50%;" />
+<img src="https://pic.imgdb.cn/item/617c0d922ab3f51d9168a1d4.jpg" alt="image-20211025232913836" style="zoom:50%;" />
 
-<img src="C:\Users\湖之极\AppData\Roaming\Typora\typora-user-images\image-20211025232932802.png" alt="image-20211025232932802" style="zoom:80%;" />
+<img src="https://pic.imgdb.cn/item/617c0d922ab3f51d9168a332.jpg" alt="image-20211025232932802" style="zoom:80%;" />
 
 <h5 id="2-Setting-the-dose"><a href="#2-Setting-the-dose" class="headerlink" title="2.Setting the dose"></a>2.Setting the dose</h5><p>多个皮肤剂量可以添加/删除使用事件构建块。当前模型提供了两个这样的块，其中任何一个都可以用于模拟:第一个(skin_events_single_dose)有一个单独的事件组，用于模拟单个剂量的应用。第二个(skin_events_two_dose)有两个事件组，以模拟两个连续的剂量。通过将一个事件组保存为pkml并将其重新加载为skin_application下的新事件组，可以添加更多剂量。当应用多个剂量时，在剂量应用时间，任何渗透在表面池或载体中，然后立即用新的剂量替换。在[EVENTS BUILDING BLOCK NAME]…Applications…skin_application…[事件组名称]…Dose_time。这里显示了输入剂量定时的菜单：</p>
 <p>Multiple skin doses can be added/removed using Events building blocks. Two such blocks are supplied  with the current model, either of which may be used for a simulation: the first  (skin_events_single_dose) has a single event group that models the application of a single dose. The  second (skin_events_two_doses) has two event groups in order to model two consecutive doses. More  doses can be added by saving one of the event groups as a pkml and reloading it as a new event group under skin_application. When multiple doses are applied, at the dose application time, any permeant in  the surface pool or vehicle is removed and then immediately replaced with the new dose. The timing of  the new dose is entered under [EVENTS BUILDING BLOCK  NAME]…Applications…skin_application…[NAME OF EVENT GROUP]…Dose_time. The menu in which the  dose timing is entered is shown here:</p>
-<img src="C:\Users\湖之极\AppData\Roaming\Typora\typora-user-images\image-20211025233256678.png" alt="image-20211025233256678" style="zoom:80%;" />
+<img src="https://pic.imgdb.cn/item/617c0d922ab3f51d9168a33a.jpg" alt="image-20211025233256678" style="zoom:80%;" />
 
 <p>用户可以通过两种方式输入单位面积的剂量质量:</p>
 <p>1)在skin_spatial_structure构建块中，然后由事件组event_with_dose_mass_from_spatial_structure自动使用。</p>
@@ -598,14 +598,14 @@
 <p>1.右键单击“构建块”菜单中的“模拟设置”构建块，并选择“创建模拟设置”。</p>
 <p>2.给这些模拟设置一个描述性名称，例如settings_睾丸激素small_dose，然后单击“Ok”。</p>
 <p>3.为实验输入“开始时间”和“结束时间”，以及指定单位时间需要多少模拟时间点的“分辨率”。</p>
-<img src="C:\Users\湖之极\AppData\Roaming\Typora\typora-user-images\image-20211026000525932.png" alt="image-20211026000525932" style="zoom:80%;" />
+<img src="https://pic.imgdb.cn/item/617c0d942ab3f51d9168a55b.jpg" alt="image-20211026000525932" style="zoom:80%;" />
 
 <h5 id="4-Simulation-of-the-model"><a href="#4-Simulation-of-the-model" class="headerlink" title="4.Simulation of the model"></a>4.Simulation of the model</h5><p>在这里，用户通过选择适当的构建块输入所需实验的模拟设置。创建一个新的模拟如下:</p>
 <p>1.在“模拟”窗口中右键单击“模拟”，并选择“创建模拟”。这将启动“模拟创建向导”。</p>
 <p>2.给模拟命名，例如skin_simulation。</p>
 <p>3.选择实验的“模拟设置”、“分子起始值”和“参数起始值”，如图10所示。</p>
 <p>4.点击“Next”三次，然后点击“Ok”。这将启动一个名为“Simulation:”的窗口：skin_simulation”</p>
-<img src="C:\Users\湖之极\AppData\Roaming\Typora\typora-user-images\image-20211026000810932.png" alt="image-20211026000810932" style="zoom:80%;" />
+<img src="https://pic.imgdb.cn/item/617c0d8f2ab3f51d91689cf5.jpg" alt="image-20211026000810932" style="zoom:80%;" />
 
 <h5 id="5-Visualization-of-the-simulation-results-仿真结果的可视化"><a href="#5-Visualization-of-the-simulation-results-仿真结果的可视化" class="headerlink" title="5.Visualization of the simulation results 仿真结果的可视化"></a>5.Visualization of the simulation results 仿真结果的可视化</h5><p>为了将MOBI仿真结果与实验结果进行比较（DANCIK等，2013），观察者构建块包括观察者，以在每平方厘米中产生从真皮清除的累积量Q的模拟量Q的模拟估计实验，以及该间隙的速率J.在模拟实验过程中实现的这些估计的最大值分别表示QABs和Jmax（Dancik等，2013）。窗口题为“仿真：Skin_simulation”打开，可以将这些数量可视化，如下所示：</p>
 <p>1.从主工具栏中选择‘Define Settings and Run’来启动‘Simulation Settings’菜单(图11)。</p>
@@ -621,51 +621,51 @@
 <li><p>elect the checkboxes corresponding to ‘Q’ and ‘J’ under the ‘Selected’ column and click ‘Ok’. As  shown in Figure 12, this will plot the cumulative amount per 1cm2 (Q) and the flux per 1cm2 (J) over the time course of the experiment, which had been specified in the  settings_testosterone_small_dose building block.</p>
 </li>
 <li><p>The chart editor can be used to configure the plot settings, including the plot units and  appearance. For example, the chart editor was used in Figure 12 to plot Q and J on a linear scale,  instead of the default log scale.</p>
-<img src="C:\Users\湖之极\AppData\Roaming\Typora\typora-user-images\image-20211026001247279.png" alt="image-20211026001247279" style="zoom:80%;" />
+<img src="https://pic.imgdb.cn/item/617c0d7f2ab3f51d91687b40.jpg" alt="image-20211026001247279" style="zoom:80%;" />
 
 </li>
 </ol>
-<img src="C:\Users\湖之极\AppData\Roaming\Typora\typora-user-images\image-20211026001338916.png" alt="image-20211026001338916" style="zoom:80%;" />
+<img src="https://pic.imgdb.cn/item/617c0d7d2ab3f51d91687901.jpg" alt="image-20211026001338916" style="zoom:80%;" />
 
 <h5 id="6-MoBi-model-assessment（模型评价）"><a href="#6-MoBi-model-assessment（模型评价）" class="headerlink" title="6.MoBi model assessment（模型评价）"></a>6.MoBi model assessment（模型评价）</h5><h4 id="二-Connecting-the-dermal-model-to-a-whole-body-PK-Sim-model"><a href="#二-Connecting-the-dermal-model-to-a-whole-body-PK-Sim-model" class="headerlink" title="二.Connecting the dermal model to a whole body PK-Sim model"></a>二.Connecting the dermal model to a whole body PK-Sim model</h4><p>以下步骤概述了如何通过将皮肤渗透模型附加到PK-Sim生成的全身模型中来模拟皮肤应用化合物的全身药代动力学。</p>
 <h5 id="1-构建并保存皮肤吸收的MoBi模拟"><a href="#1-构建并保存皮肤吸收的MoBi模拟" class="headerlink" title="1.构建并保存皮肤吸收的MoBi模拟"></a>1.构建并保存皮肤吸收的MoBi模拟</h5><p>通过打开skin_permeation_model创建一个模拟。Mbp3和以上步骤4.1-4.4。为这个示例创建的模拟名为skin_simulation，但是，由于模拟携带关于化合物、应用剂量和实验条件的信息，如“favorites”菜单中指定的，因此最好给模拟起一个描述性的名字，如custsterone_0p53ug，睾酮实验为0.53µg/cm2，见表6。</p>
 <p>接下来，通过右键单击仿真名称并选择“save simulation to MoBi PKML format”，以PKML格式保存仿真，如图13所示。模拟skin_simulation的默认文件名是skin_simulation.pkml。这个PKML文件现在可以在需要模拟表6中的实验时重用。</p>
-<img src="C:\Users\湖之极\AppData\Roaming\Typora\typora-user-images\image-20211026232212322.png" alt="image-20211026232212322" style="zoom:80%;" />
+<img src="https://pic.imgdb.cn/item/617c0d7b2ab3f51d916873d6.jpg" alt="image-20211026232212322" style="zoom:80%;" />
 
 
 
-<h5 id="2-保存MoBi皮肤模型空间结构"><a href="#2-保存MoBi皮肤模型空间结构" class="headerlink" title="2.保存MoBi皮肤模型空间结构"></a>2.保存MoBi皮肤模型空间结构</h5><p>双击“Building Blocks menu”菜单中的“ ‘Spatial Structures’ ”。然后，右击skin_spatial_structure并从菜单中选择’ Save As PKML ‘，如图14所示。使用默认名称skin_spatial_structure保存空间结构。pkml(如本例)，或者使用更具描述性的名称，如睾丸素空间al_structure.pkml。要结束这一步，请关闭skin_permeation_model.mbp3。<img src="C:\Users\湖之极\AppData\Roaming\Typora\typora-user-images\image-20211026232412064.png" alt="image-20211026232412064" style="zoom:80%;" /></p>
+<h5 id="2-保存MoBi皮肤模型空间结构"><a href="#2-保存MoBi皮肤模型空间结构" class="headerlink" title="2.保存MoBi皮肤模型空间结构"></a>2.保存MoBi皮肤模型空间结构</h5><p>双击“Building Blocks menu”菜单中的“ ‘Spatial Structures’ ”。然后，右击skin_spatial_structure并从菜单中选择’ Save As PKML ‘，如图14所示。使用默认名称skin_spatial_structure保存空间结构。pkml(如本例)，或者使用更具描述性的名称，如睾丸素空间al_structure.pkml。要结束这一步，请关闭skin_permeation_model.mbp3。<img src="https://pic.imgdb.cn/item/617c0d792ab3f51d91686f4f.jpg" alt="image-20211026232412064" style="zoom:80%;" /></p>
 <h5 id="3-在PK-Sim中构建并保存一个全身模拟"><a href="#3-在PK-Sim中构建并保存一个全身模拟" class="headerlink" title="3.在PK-Sim中构建并保存一个全身模拟"></a>3.在PK-Sim中构建并保存一个全身模拟</h5><p>接下来将使用PKSim构建一个全身模拟。在这里，给化合物命名与在skin_simulation中模拟的分子相同是很重要的。在我们的示例中，分子被命名为“permeant”，如图7所示，这个名称用于在PK-Sim中创建的化合物，如图15所示。</p>
-<img src="C:\Users\湖之极\AppData\Roaming\Typora\typora-user-images\image-20211026232600415.png" alt="image-20211026232600415" style="zoom:80%;" />
+<img src="https://pic.imgdb.cn/item/617c0d892ab3f51d91689000.jpg" alt="image-20211026232600415" style="zoom:80%;" />
 
 <p>在创建PKSim化合物时，需要重新输入skin_simulation中使用的一些分子参数。这些参数包括分子量、亲脂性和水溶性。未与白蛋白结合的部分化合物分子也可以输入到PK-Sim模型中。在创建皮肤渗透模型skin_simulation时，MoBi对这个量进行评估。它的值可以通过加载skin_simulation文件获得，如图16所示。在MoBi中的pkml，双击模拟名称(skin_simulation)，然后双击skin_compartment，选择‘parameters’选项卡并查找参数FractionUnboundToAlbumin的值，在本例中，它是0.06。</p>
-<img src="C:\Users\湖之极\AppData\Roaming\Typora\typora-user-images\image-20211026232641425.png" alt="image-20211026232641425" style="zoom:80%;" />
+<img src="https://pic.imgdb.cn/item/617c0d8d2ab3f51d9168995b.jpg" alt="image-20211026232641425" style="zoom:80%;" />
 
 <p>一旦创建了PK-Sim模拟,它给出了一个描述性的名称(在我们的例子,它叫whole_body_pksim_simulation),仿真是保存在PKML格式通过仿真名称上单击右键并选择“保存模拟手机域名PKML格式的,如图17所示。在模拟的名称之后，默认的文件名是whole_body_pksim_simulation.pkml。</p>
-<img src="C:\Users\湖之极\AppData\Roaming\Typora\typora-user-images\image-20211026232708768.png" alt="image-20211026232708768" style="zoom:80%;" />
+<img src="https://pic.imgdb.cn/item/617c0d802ab3f51d91687e3f.jpg" alt="image-20211026232708768" style="zoom:80%;" />
 
 <h5 id="4-加载全身和皮肤模型到MoBi"><a href="#4-加载全身和皮肤模型到MoBi" class="headerlink" title="4.加载全身和皮肤模型到MoBi"></a>4.加载全身和皮肤模型到MoBi</h5><p>1.在MoBi ‘ File ‘菜单中，选择’ Open Simulation ‘并选择全身仿真文件whole_body_pksim_simulation。在上一步的PK-Sim中生成的pkml。这将把这个模型的构建块加载到MoBi中。</p>
 <p>2.接下来，双击Spatial Structures构建块中的whole_body_pksim_simulation，选择“Diagram”选项卡，以图形化的方式显示整个模型结构。</p>
 <p>3.接下来，右键单击模型旁边的空白区域，选择“Load Top Container”，如图18所示。选择MoBi pkml文件skin_spatial_structure。pkml，并选择加载DERMAL_APPLICATION_AREA容器，如图19所示。这将加载皮肤渗透模型的空间结构，在全身模型旁边的空白区域命名为DERMAL_APPLICATION_AREA，如图21所示。</p>
 <p>4.右键单击刚刚加载的DERMAL_APPLICATION_AREA空间结构。向下滚动并将鼠标悬停在布局菜单项上，选择“将命名模板应用到选区”。选择文件skin_template.mbdt。这个文件将改进新的DERMAL_APPLICATION_AREA容器的图形布局。</p>
 <p>5.如4.1节中所示，从Utilities菜单中选择’ Load ‘，然后选择文件skin_favorites.xml来加载皮肤模型的’ Favorites ‘菜单。这将允许用户从whole_body_pksim_simulation构建块的‘Favorites’菜单中修改皮肤分区的参数。</p>
-<h5 id="5-将皮肤渗透模型连接到全身模型"><a href="#5-将皮肤渗透模型连接到全身模型" class="headerlink" title="5.将皮肤渗透模型连接到全身模型"></a>5.将皮肤渗透模型连接到全身模型</h5><p>在整个身体模型的DERMAL_APPLICATION_AREA腔室的PKSim_Link子腔室和VenousBlood腔室的Plasma腔室之间创建一个邻域，给它一个描述性的名称，例如skin_whole_body_neighborhood。邻域是通过将指针从PKSim_Link拖动到VenousBlood的血浆子室来创建的。图21演示了这一步的最终结果<img src="C:\Users\湖之极\AppData\Roaming\Typora\typora-user-images\image-20211026233036386.png" alt="image-20211026233036386" style="zoom:80%;" /></p>
+<h5 id="5-将皮肤渗透模型连接到全身模型"><a href="#5-将皮肤渗透模型连接到全身模型" class="headerlink" title="5.将皮肤渗透模型连接到全身模型"></a>5.将皮肤渗透模型连接到全身模型</h5><p>在整个身体模型的DERMAL_APPLICATION_AREA腔室的PKSim_Link子腔室和VenousBlood腔室的Plasma腔室之间创建一个邻域，给它一个描述性的名称，例如skin_whole_body_neighborhood。邻域是通过将指针从PKSim_Link拖动到VenousBlood的血浆子室来创建的。图21演示了这一步的最终结果<img src="https://pic.imgdb.cn/item/617c0d8e2ab3f51d91689aee.jpg" alt="image-20211026233036386" style="zoom:80%;" /></p>
 <h5 id="6-加载剩余的皮肤渗透构件块"><a href="#6-加载剩余的皮肤渗透构件块" class="headerlink" title="6.加载剩余的皮肤渗透构件块"></a>6.加载剩余的皮肤渗透构件块</h5><p>到目前为止，MoBi中加载的都是全身模型和皮肤渗透模型的空间结构。在可以模拟全身和皮肤渗透一体化模型之前，皮肤渗透模型的构建块，之前在skin_simulation的步骤1中保存。Pkml，需要装载。在MoBi中选择Modeling菜单，然后点击“合并”按钮，如图所示:</p>
-<img src="C:\Users\湖之极\AppData\Roaming\Typora\typora-user-images\image-20211027001125515.png" alt="image-20211027001125515" style="zoom:80%;" />
+<img src="https://pic.imgdb.cn/item/617c0d822ab3f51d9168820a.jpg" alt="image-20211027001125515" style="zoom:80%;" />
 
 <p>加载文件skin_simulation.pkml进入“模拟路径”。这使用户可以选择将skin_simulation中的构建块与whole_body_pksim_simulation中的构建块合并。在whole_body_pksim_simulation中，除了Molecules构建块skin_molecules之外的所有构建块都应该与它们对应的块合并。</p>
-<img src="C:\Users\湖之极\AppData\Roaming\Typora\typora-user-images\image-20211027001221326.png" alt="image-20211027001221326" style="zoom:80%;" />
+<img src="https://pic.imgdb.cn/item/617c0d8f2ab3f51d91689cfa.jpg" alt="image-20211027001221326" style="zoom:80%;" />
 
 <h5 id="7-Simulate-the-integrated-model"><a href="#7-Simulate-the-integrated-model" class="headerlink" title="7.Simulate the integrated model"></a>7.Simulate the integrated model</h5><p>皮肤渗透和全身模型现在是集成和可以模拟。模拟可以像前面描述的那样创建，右键单击“模拟”并选择“创建模拟”。</p>
 <p>模拟创建向导菜单将提示用户选择构建块。用户应该选择在前一步中合并在一起的构建块，如图24所示</p>
-<img src="C:\Users\湖之极\AppData\Roaming\Typora\typora-user-images\image-20211027001339588.png" alt="image-20211027001339588" style="zoom:60%;" />
+<img src="https://pic.imgdb.cn/item/617c0d8f2ab3f51d91689cf5.jpg" alt="image-20211027001339588" style="zoom:60%;" />
 
 <p>一旦模拟完成，用户可以在模型的任何想要的隔间中绘制数量图。图25中的例子显示了在角质层(SC)、表皮(ED)、真皮(DE)和肝脏血浆中模拟的渗透量。</p>
-<img src="C:\Users\湖之极\AppData\Roaming\Typora\typora-user-images\image-20211027001444294.png" alt="image-20211027001444294" style="zoom:80%;" />
+<img src="https://pic.imgdb.cn/item/617c0d8f2ab3f51d91689d6d.jpg" alt="image-20211027001444294" style="zoom:80%;" />
 
-<h4 id="LVM-微乳液的和组成"><a href="#LVM-微乳液的和组成" class="headerlink" title="LVM 微乳液的和组成"></a>LVM 微乳液的和组成</h4><ul>
-<li><input disabled="" type="checkbox"> </li>
-</ul>
+
+
+<p>参考文献：</p>
 
                 
             </div>
